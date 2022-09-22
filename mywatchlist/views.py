@@ -9,7 +9,7 @@ def show_mywatchlist(request):
     context = {
         'list_watch': data_watchlist,
         'nama': 'Alyssa Larasati',
-        'student_id': '2106656125'
+        'student_id': 2106656125,
     }
     return render(request, "mywatchlist.html",context)
 

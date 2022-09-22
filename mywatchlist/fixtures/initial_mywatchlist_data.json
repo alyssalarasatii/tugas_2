@@ -9,8 +9,8 @@
             "release_date": "Januari 10, 2008",
             "review": "Cerita nya sangat bagus karena alur ceritanya sangat relatable dengan masalah-masalah yang ada di sekitar anak muda"
         }
-},
-{
+    },
+    {
         "model":"mywatchlist.mywatchlist",
         "pk":2,
         "fields":{

@@ -1,0 +1,36 @@
+
+{% extends 'base.html' %}
+
+ {% block content %}
+
+  <h1>Tugas 3 Assignment PBP/PBD</h1>
+
+  <h5>Name: </h5>
+  <p>{{nama}}</p>
+
+  <h5>Student ID: </h5>
+  <p>"2106656125"</p>
+
+  <table>
+    <tr>
+      <th>Watched</th>
+      <th>Title</th>
+      <th>Rating</th>
+      <th>Release Date</th>
+      <th>Review</th>
+    </tr>
+
+    {% comment %} Tambahkan data di bawah baris ini {% endcomment %}
+    {% for shows in list_watch %}
+        <tr>
+            <th>{{shows.watched}}</th>
+            <th>{{shows.title}}</th>
+            <th>{{shows.rating}}</th>
+            <th>{{shows.release_date}}</th>
+            <th>{{shows.review}}</th>
+        </tr>
+    {% endfor %}
+
+  </table>
+
+ {% endblock content %}

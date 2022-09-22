@@ -4,6 +4,6 @@ from django.db import models
 class MyWatchList(models.Model):
     watched = models.TextField()
     title = models.TextField()
-    rating = models.IntegerField()
-    release_date = models.BigIntegerField()
+    rating = models.CharField(max_length=255)
+    release_date = models.CharField(max_length=30)
     review = models.CharField(max_length=255)
