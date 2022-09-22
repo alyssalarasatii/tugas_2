@@ -14,3 +14,9 @@ Pertama saya buat sebuah fungsi pada folder views.py yang bernama s_katalog utnu
         <th>{{katalog.description}}</th>
         <th>{{katalog.item_url}}</th>
 Dengan ini data yang saya masukkan ke views akan terlihat pada halaman web. Terakhir pada proses keempat, saya melakukan deployment dengan cara buka web Heroku lalu membuat aplikasi. Setelah itu kita inisiasi git repo pengerjaan kita dengan cara menuliskan git init, heroku git:remot(nama aplikasi heroku), lalu ketik git add,git commit, lalu push ke heroku master. Kemudian dari itu, projek berhasil di deploy.
+
+
+Jelaskan perbedaan antara JSON, XML, dan HTML! perbedaannya adalah di json tulisan file nya adalah .json sedangkan kalau di xml .xml dan di HTML adalah .html. 
+Selain itu di json bisa mengirimkan data dengan cara diuraikan dan dikirimkan melalui internet. Sedangkan di xml karena data nya lebih ter-struktur dan user bisa menggunakan xml untuk menambahkan catatan
+
+Jelaskan mengapa kita memerlukan data delivery dalam pengimplementasian sebuah platform?

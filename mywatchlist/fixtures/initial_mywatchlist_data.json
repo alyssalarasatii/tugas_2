@@ -1,0 +1,131 @@
+[
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":1,
+        "fields":{
+            "watched":"sudah",
+            "title":"the skins",
+            "rating":"5/5",
+            "release_date": "Januari 10, 2008",
+            "review": "Cerita nya sangat bagus karena alur ceritanya sangat relatable dengan masalah-masalah yang ada di sekitar anak muda"
+        }
+},
+{
+        "model":"mywatchlist.mywatchlist",
+        "pk":2,
+        "fields":{
+            "watched":"belum",
+            "title":"the virgin suicides",
+            "rating":"4/5",
+            "release_date": "April 21, 2000",
+            "review": "Cerita dari film ini sangat unik dan memiliki banyak sinematografi yang sangat baik sehingga enak untuk ditonton "
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":3,
+        "fields":{
+            "watched":"sudah",
+            "title":"the gilmore girls",
+            "rating":"5/5",
+            "release_date": "October 5, 2000",
+            "review": "latar tempat dan alur cerita membuat kita merasa nyaman untuk terus mengikuti programnya"
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":4,
+        "fields":{
+            "watched":"sudah",
+            "title":"Avengers : endgame",
+            "rating":"5/5",
+            "release_date": "April 24, 2019",
+            "review": "film yang sangat bagus karena ada banyak hal yang terjadi kepada tokoh hero yang legendaris"
+        }
+
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":5,
+        "fields":{
+            "watched":"belum",
+            "title":"Business Proposal",
+            "rating":"4.5/5",
+            "release_date": "Februari 28, 2022",
+            "review": "drama korea yang sedang naik daun karena komik nya sudah sangat terkenal"
+        }
+
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":6,
+        "fields":{
+            "watched":"sudah",
+            "title":"the guardian",
+            "rating":"5/5",
+            "release_date": "Desember 2, 2016",
+            "review": "kisah yang sangat romantis dan sangat sedih"
+        }
+
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":7,
+        "fields":{
+            "watched":"belum",
+            "title":"the eternals",
+            "rating":"5/5",
+            "release_date": "November 3, 2021",
+            "review": "ada banyak pemain film yang terkenal dengan kemampuann acting yang sangat bagus sehingga film ini sangat terkenal dan banyak penggemarnya"
+        }
+
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":8,
+        "fields":{
+            "watched":"sudah",
+            "title":"Never Have I Ever",
+            "rating":"5/5",
+            "release_date": "April 27, 2020",
+            "review": "tv show yang lucu dan juga relatable terutama untuk anak muda yang sedang melalui cinta monyet di masa SMA"
+        }
+
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":9,
+        "fields":{
+            "watched":"sudah",
+            "title":"To All The Boys I Loved Before",
+            "rating":"4/5",
+            "release_date": "Augustus 17, 2018",
+            "review": "film yang romantis dengan ending yang agak sedih"
+        }
+
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":10,
+        "fields":{
+            "watched":"sudah",
+            "title":"Violet Evergarden",
+            "rating":"5/5",
+            "release_date": "March 3, 2021",
+            "review": "film yang sangat menyentuh hati karena film ini ber-genre slice of life dan juga dibawa dengan sangat baik sehingga pasti seluruh penonton pastinya akan menangis saat menonton film ini"
+        }
+
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":11,
+        "fields":{
+            "watched":"belum",
+            "title":"Little Women",
+            "rating":"5/5",
+            "release_date": "Februari 7, 2020",
+            "review": "film ini sangat legendaris karena film ini merupakan adaptasi dari buku yang ditulis oleh Louisa May Alcott dan sebelumnya pun sudah pernah dibuat filmnya yang dimainkan oleh Winona Ryder. Terdapat banyak orang menjadi lebih menghargai perjuangan wanita dalam bekerja semenjak menonton film ini karena film ini menceritakan perjuangan wanita untuk bekerja di zaman yang masih sedikit wanita diperbolehkan untuk bekerja"
+        }
+
+    }
+]
