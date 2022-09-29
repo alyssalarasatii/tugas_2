@@ -20,3 +20,5 @@ Jelaskan perbedaan antara JSON, XML, dan HTML! perbedaannya adalah di json tulis
 Selain itu di json bisa mengirimkan data dengan cara diuraikan dan dikirimkan melalui internet. Sedangkan di xml karena data nya lebih ter-struktur dan user bisa menggunakan xml untuk menambahkan catatan
 
 Jelaskan mengapa kita memerlukan data delivery dalam pengimplementasian sebuah platform?
+
+https://larastugas.herokuapp.com/mywatchlist/html/
