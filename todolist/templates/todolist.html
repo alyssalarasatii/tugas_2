@@ -1,16 +1,37 @@
 {% extends 'base.html' %}
 
  {% block content %}
+ <style>
+  body{
+    background-color: ivory;
+  }
+  table,th{
+    font-family:monospace;
+    text-align: center;
+    border: 3px solid rgb(152, 197, 202);
+  }
+  td{
+    font-family:monospace;
+    text-align:center;
+    border: 3px solid rgb(152, 197, 202);
+    border-collapse: collapse;
+  }
+ </style>
 
-  <h1>Tugas 4 Assignment PBP/PBD</h1>
+ <nav class = "navbar" style="background-color: lightpink;font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
 
-  <h5>Name: </h5>
-  <p>Alyssa Larasati</p>
+  <div class= "container-fluid">
+   <div class = "login container d-flex flex-column justify-content-center align-items-center">
+      <a class = "navbar-brand mb-0 h1"style = "font-size: 50px"> &#128218 Your Todolist &#128204</a>
+  </div>
 
-  <h5>Student ID: </h5>
-  <p>2106656125</p>
+  </nav>
+  <div class = "login container d-flex flex-column justify-content-center align-items-center">
+  <h5 style ="margin-top:20px;">Welcome back alyssalarasati!</h5>
 
-  <table>
+  <h5>Student ID: 2106656125</h5>
+
+  <table style ="margin-bottom:90px;margin-top:60px;">
     <tr>
       <th>User Name</th>
       <th>Task Date</th>
@@ -20,15 +41,124 @@
     {% comment %} Add the data below this line {% endcomment %}
     {% for todolist in list_todo %}
     <tr>
-        <th>{{todolist.username}}</th>
-        <th>{{todolist.date_of_task}}</th>
-        <th>{{todolist.title}}</th>
-        <th>{{todolist.description}}</th>
+        <td>{{todolist.username}}</td>
+        <td>{{todolist.date_of_task}}</td>
+        <td>{{todolist.title}}</td>
+        <td>{{todolist.description}}</td>
     </tr>
-{% endfor %}
-<button><a href="{% url 'todolist:task_user' %}">Tambah Task</a></button>
-<button><a href="{% url 'todolist:logout' %}">Logout</a></button>
-<h5>Sesi terakhir login: {{ last_login }}</h5>
+    {% endfor %}
+    <tr>
+      <td>alyssalarasati</td>
+      <td>12 Oktober 2022</td>
+      <td>Membuat makalah MPPI</td>
+      <td>Di kumpulkan tanggal 12 Oktober 2022</td>
+    </tr>
+    <tr>
+      <td>alyssalarasati</td>
+      <td>-</td>
+      <td>Bersihin kamar</td>
+      <td>Sebelum ke kampus</td>
+    </tr>
+    <tr>
+      <td>alyssalarasati</td>
+      <td>-</td>
+      <td>Siram tanaman</td>
+      <td>Siram tanaman di kebun mama</td>
+    </tr>
+    <tr>
+      <td>alyssalarasati</td>
+      <td>20 Oktober 2022</td>
+      <td>Menyelesaikan TP 2 SDA</td>
+      <td>Di kumpulkan tanggal 20 Oktober 2022</td>
+    </tr>
   </table>
+
+<div style="display: flex; flex-direction: row; flex-wrap: wrap; font-family:monospace; justify-content: center;">
+
+{#  Single Card Template:#}
+    <div class="card" style="width: 18rem; margin: 10px">
+      <img src="{{ card.image }}" class="card-img-top" >
+      <div class="card-body">
+        <div style="display: flex; flex-direction: row">
+          <h5 class="card-title">Membuat makalah MPPI</h5>
+          {#  Colored cirlce:#}
+          <div style="
+            background: rgb(181, 211, 215);
+            width: 20px;
+            height: 20px;
+            margin-left: 10px;
+            border-radius: 50%;
+          "></div>
+        </div>
+        <p class="card-text">Di kumpulkan tanggal 12 Oktober 2022</p>
+      </div>
+    </div>
+    
+    {#  Single Card Template:#}
+    <div class="card" style="width: 18rem; margin: 10px">
+      <img src="{{ card.image }}" class="card-img-top" >
+      <div class="card-body">
+        <div style="display: flex; flex-direction: row">
+          <h5 class="card-title">Bersihin kamar</h5>
+          {#  Colored cirlce:#}
+          <div style="
+            background: rgb(181, 211, 215);
+            width: 20px;
+            height: 20px;
+            margin-left: 10px;
+            border-radius: 50%;
+          "></div>
+        </div>
+        <p class="card-text">Sebelum ke kampus</p>
+      </div>
+    </div> 
+
+  {#  Single Card Template:#}
+    <div class="card" style="width: 18rem; margin: 10px">
+      <img src="{{ card.image }}" class="card-img-top" >
+      <div class="card-body">
+        <div style="display: flex; flex-direction: row">
+          <h5 class="card-title">Siram tanaman</h5>
+          {#  Colored cirlce:#}
+          <div style="
+            background: rgb(181, 211, 215);
+            width: 20px;
+            height: 20px;
+            margin-left: 10px;
+            border-radius: 50%;
+          "></div>
+        </div>
+        <p class="card-text">Siram tanaman di kebun mama</p>
+      </div>
+    </div>
+
+    {#  Single Card Template:#}
+    <div class="card" style="width: 18rem; margin: 10px">
+      <img src="{{ card.image }}" class="card-img-top" >
+      <div class="card-body">
+        <div style="display: flex; flex-direction: row">
+          <h5 class="card-title">Menyelesaikan TP 2 SDA</h5>
+          {#  Colored cirlce:#}
+          <div style="
+            background: rgb(181, 211, 215);
+            width: 20px;
+            height: 20px;
+            margin-left: 10px;
+            border-radius: 50%;
+          "></div>
+        </div>
+        <p class="card-text">Di kumpulkan tanggal 20 Oktober 2022</p>
+      </div>
+    </div>
+  </div>
+
+<div style="display: flex; flex-direction: row; flex-wrap: wrap; font-family:monospace; justify-content: center;">
+<button style="margin-right:20px;margin-top: 30px;"><a href="{% url 'todolist:task_user' %}">Tambah Task</a></button>
+<button style="margin-right:20px;margin-top: 30px;"><a href="{% url 'todolist:logout' %}">Logout</a></button>
+</div>
+<p style="margin-top:20px;">Sesi terakhir login: {{ last_login }}</p>
+  </table>
+  
+  
 
  {% endblock content %}

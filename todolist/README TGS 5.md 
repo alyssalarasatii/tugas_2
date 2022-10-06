@@ -1,0 +1,80 @@
+Pertanyaan tugas 5 :
+- Apa perbedaan dari Inline, Internal, dan External CSS? Apa saja kelebihan dan kekurangan dari masing-masing style?
+Internal CSS adalah code CSS yang ditulis secara langsung dalam tag<style> dan code HTML yang ditulis di bagian header file HTML. Biasanya digunakan untuk membuat tampilan web pada 1 halaman yang sedang dibuat namun tidak akan automatis ter-apply ke halaman-halaman lainnya.
+Kelebihannya : perubahan yang ada pada internal CSS hanya terjadi pada 1 halaman saja, Class dan ID dapat digunakan oleh stylesheet, dan kita tidak perlu upload file yang banyak karena HTML dan CSS ada di file yang sama.
+Kekurangannya : Kadang bisa tidak efisien apabila menggunakan CSS yang sama di file yang banyak dan web nya lambat dikarenakan CSS yang beda-beda mengakibatkan reload ulang setiap halaman website berganti. 
+Contoh Internal CSS : <h1> Heading </h1>
+                    <style>
+                         h1{
+                            color: pink
+                         }
+                    </style>
+
+External CSS adalah code CSS yang ditulis terpisah dari code HTML nya. Biasanya external CSS ditulis di file yang khusus untuk menggunakan ekstensi .css dan biasanya diletakkan setelah bagian <head> di halamannya.
+Kelebihan : Website dapat load lebih cepat, ukuran halaman menjadi lebih kecil an struktur HTML jadi rapih, dan file CSS bisa dipakai di beberapa halaman website sekaligus
+Kekurangan : Apabila file CSS gagal dipanggil oleh file HTML, maka tampilan website akan berantakan
+Contoh External CSS : <link href=meow.css rel="stylesheet">
+                        <h1>
+                            JUDUL
+                        </h1>
+
+Inline CSS adalah code CSS yang ditulis langsung pada atribut elemen HTML. CSS ditulis pada setiap elemen HTML yang memiliki atribut style.
+Kelebihan : Untuk memperbaiki code dengan cepat, berguna saat kita ingin hanya ingin test dan lihat perubahan yang ada pada satu elemen, dan proses doal website lebih cepat
+Kekurangan : Tidak begitu efisien karena inline style CSS hanya dapat diterapkan pada satu elemen HTML
+Contoh :
+<h2 style="margin-top:20px;color:lightpink;font-family:TimesNewRoman;">Todolist kamu</h2>
+
+- Jelaskan tag HTML5 yang kamu ketahui.
+<!DOCTYPE html> adalah untuk deklarasi type dokumen
+<html> adalah untuk tag utama dalam HTML
+<head> adalah untuk bagian paling atas dari dokumen
+<title> adalah untuk judul web
+<body> adalah untuk bagian body atau isi dari dokumen
+
+- Jelaskan tipe-tipe CSS selector yang kamu ketahui.
+Tipe-tipe CSS selector yang saya ketahui adalah:
+1. Selector tag
+Selector tag biasa dikenal sebagai type selector. Kita dapat gunakan selector ini dengan cara memilih elemen berdasarkan nama tag. Contoh:
+p{
+    color: black;
+}
+Lalu implements : <p>tes<p>
+Pada contoh diatas, saya select seluruh elemen "<p>" kemudian buat warna teksnya menjadi hitam
+
+2. Selector Class
+Selector ini adalah selector yang memilih elemen berdasarkan class yang diberikan. Untuk menggunakan class ini, kita harus membuat tanda titik di depannya. Contoh:
+.pinkie {
+    color: pink;
+    background: beige;
+}
+Sekarang kita telah membuat selector dengan nama ".pinkie". Lalu untuk menggunakan selector ini pada HTML, kita hanya perlu menambahkan atribut class di dalamnya.
+Contoh: 
+<p>belajar<b class="pinkie">PBP</b> seru tapi kadang suka kesel kalo ada error</p> 
+
+- Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+Untuk mengimplementasikan checklist diatas, pertama-tama saya langsung mengimplememtasikan selector di file HTML register, login, dan todolist. Selector yang saya gunakan pada beberapa bagian adalah selector class dan salah
+satunya adalah untuk bagian navbar. Disini saya buat agar ada garis pink diatas ketiga halaman web. 
+Lalu saya juga memberi styling di beberapa bagian juga dengan mengubah warna background halaman, tabel, dan juga card.
+Saya menambahkan card untuk tulisan tasks todolist user. Cara saya membuat card adalah dengan menggunakan code berikut :
+
+{#  Single Card Template:#}
+    <div class="card" style="width: 18rem; margin: 10px">
+      <img src="{{ card.image }}" class="card-img-top" >
+      <div class="card-body">
+        <div style="display: flex; flex-direction: row">
+          <h5 class="card-title">Membuat makalah MPPI</h5>
+          {#  Colored cirlce:#}
+          <div style="
+            background: rgb(181, 211, 215);
+            width: 20px;
+            height: 20px;
+            margin-left: 10px;
+            border-radius: 50%;
+          "></div>
+        </div>
+        <p class="card-text">Di kumpulkan tanggal 12 Oktober 2022</p>
+      </div>
+    </div>
+
+Setelah itu sebelum saya melakukan deploy, saya juga memastikan terlebih dahulu apabila web responsive.
+Terakhir, saya melakukan deploy.

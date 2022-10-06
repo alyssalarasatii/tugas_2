@@ -59,15 +59,15 @@ def logout_user(request):
 
 def task_user(request):
     form = TaskForm()
-    if request.method == "POST":
-        form = TaskForm(request.POST or None, request.FILES or None)
+    if request.method == 'POST':
+        form = TaskForm(request.POST)
+        title = request.POST.get('title')
+        description = request.POST.get('description')
+        user = request.user
+        date_of_task = datetime.datetime.now()
+
         if form.is_valid():
-            task = ToDoList()
-            task.user = request.user
-            task.date_of_task = datetime.datetime.now()
-            task.title = form.cleaned_data['title']
-            task.description = form.cleaned_data['description']
-            task.save()
+            ToDoList.objects.create.fields(title = title, description = description, username = user, date = date_of_task)
             messages.success(request, 'Task telah berhasil dibuat!')
             return HttpResponseRedirect(reverse('todolist:show_todolist'))
 
