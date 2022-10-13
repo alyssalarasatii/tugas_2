@@ -8,7 +8,7 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth import logout
 from django.contrib.auth.decorators import login_required
 import datetime
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponse
 from django.urls import reverse
 
 from todolist.forms import TaskForm
@@ -23,6 +23,11 @@ def show_todolist(request):
     }
     return render(request, "todolist.html", context)
 
+@login_required(login_url='/todolist/login/')
+def todolist_json(req):
+    list_task = ToDoList.objects.filter(user=req.user)
+    return HttpResponse(serializers.serialize("json", list_task), content_type="application/json")
+
 def register(request):
     form = UserCreationForm()
 
@@ -32,7 +37,7 @@ def register(request):
             form.save()
             messages.success(request, 'Akun telah berhasil dibuat!')
             return redirect('todolist:login')
-    
+
     context = {'form':form}
     return render(request, 'register.html', context)
 
@@ -59,15 +64,15 @@ def logout_user(request):
 
 def task_user(request):
     form = TaskForm()
-    if request.method == 'POST':
-        form = TaskForm(request.POST)
-        title = request.POST.get('title')
-        description = request.POST.get('description')
-        user = request.user
-        date_of_task = datetime.datetime.now()
-
+    if request.method == "POST":
+        form = TaskForm(request.POST or None, request.FILES or None)
         if form.is_valid():
-            ToDoList.objects.create.fields(title = title, description = description, username = user, date = date_of_task)
+            task = ToDoList()
+            task.user = request.user
+            task.date_of_task = datetime.datetime.now()
+            task.title = form.cleaned_data['title']
+            task.description = form.cleaned_data['description']
+            task.save()
             messages.success(request, 'Task telah berhasil dibuat!')
             return HttpResponseRedirect(reverse('todolist:show_todolist'))
 
