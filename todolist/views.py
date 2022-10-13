@@ -23,11 +23,6 @@ def show_todolist(request):
     }
     return render(request, "todolist.html", context)
 
-@login_required(login_url='/todolist/login/')
-def todolist_json(req):
-    list_task = ToDoList.objects.filter(user=req.user)
-    return HttpResponse(serializers.serialize("json", list_task), content_type="application/json")
-
 def register(request):
     form = UserCreationForm()
 
